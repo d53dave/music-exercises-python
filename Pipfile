@@ -14,6 +14,7 @@ click = "*"
 music22 = "*"
 mido = "*"
 python-rtmidi = "*"
+blessings = "*"
 
 [requires]
 python_version = "3.7"
