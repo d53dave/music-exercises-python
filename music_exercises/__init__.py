@@ -46,6 +46,10 @@ class Note():
                     return True
         return False
 
+    def __str__(self):
+        s = ' or '.join(self.names)
+        return s
+
 
 NOTES.extend([
     Note('A'),

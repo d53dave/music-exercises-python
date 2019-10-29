@@ -97,13 +97,15 @@ class Intervals():
                     # Treat parse errors as incorrect answer
                     pass
 
-                correct_str = f'is {t.red}{t.bold}Incorrect!'
+                challenge_delay = 2
+                correct_str = f'is {t.red}{t.bold}Incorrect! Correct answer would have been `{correct_note}`.'
                 if correct:
+                    challenge_delay = 1  # wait a shorter amount if the answer was correct
                     correct_str = f'is {t.green}{t.bold}Correct!'
                 print(f'{t.move_up}', end='')
                 print(f'{input_str} {correct_str}{t.normal}',
                       end='',
                       flush=True)
 
-                time.sleep(1)
+                time.sleep(challenge_delay)
                 print(t.move_up, t.move_up, t.move_x(0), end='')
