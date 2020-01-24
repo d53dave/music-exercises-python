@@ -50,17 +50,20 @@ class Note():
         s = ' or '.join(self.names)
         return s
 
+    def __hash__(self):
+        return hash(''.join(sorted(self.names)))
+
 
 NOTES.extend([
     Note('A'),
     Note('A#', 'Bb'),
-    Note('B'),
-    Note('C'),
+    Note('B', 'Cb'),
+    Note('C', 'B#'),
     Note('C#', 'Db'),
     Note('D'),
     Note('D#', 'Eb'),
     Note('E'),
-    Note('F'),
+    Note('F', 'E#'),
     Note('F#', 'Gb'),
     Note('G'),
     Note('G#', 'Ab')
